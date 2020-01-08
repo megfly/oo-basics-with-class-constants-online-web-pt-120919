@@ -11,7 +11,7 @@ class Shoe
   def brand=(brand)
     @brand = brand 
     BRANDS << brand 
-    BRANDS.uniq!
+    BRANDS << brand unless BRANDS.include(brand)
   end
 
   def cobble
